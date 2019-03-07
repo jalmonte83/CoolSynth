@@ -9,50 +9,61 @@
 import UIKit
 import AudioKitUI
 
+protocol OctaveButtonDelegate: AnyObject {
+    func setupOctaveLogic()
+}
+
 @IBDesignable public class CoolADSRView: UIView {
     
+    private var keyboardView = AKKeyboardView()
+    var delegate: OctaveButtonDelegate!
     
-    let metronomeButton: AKButton = {
+    lazy var metronomeButton: AKButton = {
         let pb = AKButton()
         pb.title = "Metronome"
         pb.borderColor = .black
-        pb.borderWidth = 20.0
-        // pb.h
-        return pb
-    }()
-    let octaveDown: AKButton = {
-        let pb = AKButton()
-        pb.title = "Up Down"
-        pb.borderColor = .black
-        pb.borderWidth = 20.0
-        // pb.h
+        pb.borderWidth = 15.0
         return pb
     }()
     
-    let octaveUp: AKButton = {
-        let pb = AKButton()
-        pb.title = "Up Octive"
+    lazy var octaveDown: AKButton = {
+        let pb = AKButton.init(title: "Down Octave", callback: { (sender) in
+            print("lo")
+            if self.keyboardView.octaveCount == 1 {
+                
+            }
+            //TODO:
+            /*When it loads is at a fixed note
+             noteValueDown = xx
+             noteValueUp = yy
+             When the button is clicked we change note value
+             noteValue = yy
+             we need a measure to deduct or add
+             
+             */
+        })
         pb.borderColor = .black
-        pb.borderWidth = 20.0
+        pb.borderWidth = 15.0
+        return pb
+    }()
+    
+    // try
+    let octaveUp: AKButton = {
+        let pb = AKButton.init(title: "Octave", callback: { (sender) in
+            print("hi")
+        })
+    
         
+        pb.borderColor = .black
+        pb.borderWidth = 15.0
         return pb
     }()
     
     let switchOctaveOutlet: UISwitch = {
         let oSwitch = UISwitch()
         oSwitch.isOn = false
-        
-        //oSwitch.addSubview()
-        
+//        oSwitch
         return oSwitch
-    }()
-    
-    let metronome: AKSamplerMetronome = {
-        let met = AKSamplerMetronome()
-        
-        met.tempo = 120
-
-        return met
     }()
     
     override init(frame: CGRect) {

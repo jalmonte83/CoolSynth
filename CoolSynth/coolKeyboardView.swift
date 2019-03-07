@@ -23,7 +23,7 @@ import AudioKitUI
     
     let coolSynthKeyboard: AKKeyboardView = {
         let kbv = AKKeyboardView()
-        //kbv.octaveCount = 1
+        kbv.octaveCount = 1
         kbv.firstOctave = 3
         kbv.keyOnColor = .orange
         kbv.polyphonicMode = true

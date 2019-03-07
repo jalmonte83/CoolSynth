@@ -14,15 +14,16 @@ import ReplayKit
 class ViewController: UIViewController {
     
     private var controlsButtonView = CoolADSRView()
+    
     private var newKeyboardView = coolKeyboardView()
     private var midiSample = AKMIDISampler()
     // private var metronome = AKMetronome()
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       controlsButtonView.delegate = self
         newKeyboardView.coolSynthKeyboard.delegate = self
         
         AudioKit.output = midiSample
@@ -34,9 +35,13 @@ class ViewController: UIViewController {
         
         //TODO: get switch to work
         //controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for:.valueChanged)
+        //        controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for: .touchUpInside)
+        
+        //    controlsButtonView.octaveUp.addTarget(self, action: #selector(upOctavePressed), for: .touchUpInside)
         
         setupUI()
         loadSound()
+        
     }
     
     func setupUI() {
@@ -46,8 +51,6 @@ class ViewController: UIViewController {
         stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
         stackView.addArrangedSubview(controlsButtonView)
         stackView.addArrangedSubview(newKeyboardView.coolSynthKeyboard)
         view.addSubview(stackView)
@@ -56,25 +59,28 @@ class ViewController: UIViewController {
         stackView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        
     }
     
     @objc func upOctavePressed() {
         if newKeyboardView.octaveCount == 2 && newKeyboardView.firstOctave == 5 {
             print("It's over 9,000!")
         } else if newKeyboardView.firstOctave == 6 {
-            print("It's over 9,000!")
-            
+            print("It's under 9,000!")
         } else {
             newKeyboardView.firstOctave += 1
         }
     }
     
+    @objc func downOctavePressed() {
+        if newKeyboardView.firstOctave == 0 {
+            print("the Tao is like water...")
+        } else {
+            newKeyboardView.firstOctave += -1
+        }
+    }
     
-    
+
     @objc func octaveSwitchPressed(){
-        controlsButtonView.switchOctaveOutlet.isOn = false
         if newKeyboardView.octaveCount == 1 {
             newKeyboardView.octaveCount += 1
         } else if newKeyboardView.octaveCount == 2 {
@@ -111,5 +117,17 @@ extension ViewController: AKKeyboardDelegate {
         }
     }
 }
+
+extension ViewController: OctaveButtonDelegate {
+    func setupOctaveLogic() {
+        
+        
+    }
+    
+   
+
+
+}
+
 
 

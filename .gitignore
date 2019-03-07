@@ -8,6 +8,7 @@ DerivedData/
 
 AudioKit.framework
 AudioKitUI.framework
+Frameworks
 
 ## Various settings
 *.pbxuser

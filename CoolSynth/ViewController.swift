@@ -16,6 +16,14 @@ class ViewController: UIViewController {
     private var controlsButtonView = CoolADSRView()
     
     private var newKeyboardView = coolKeyboardView()
+    //private var newKeyboardViewTwo = CoolKeyboardTwoOctView()
+    var stackView = UIStackView() {
+        didSet{
+            stackView.reloadInputViews()
+        }
+    }
+
+
     private var midiSample = AKMIDISampler()
     // private var metronome = AKMetronome()
     
@@ -25,6 +33,7 @@ class ViewController: UIViewController {
         
        controlsButtonView.delegate = self
         newKeyboardView.coolSynthKeyboard.delegate = self
+     //   newKeyboardViewTwo.coolSynthKeyboard.delegate = self
         
         AudioKit.output = midiSample
         do {
@@ -34,18 +43,18 @@ class ViewController: UIViewController {
         }
         
         //TODO: get switch to work
-        //controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for:.valueChanged)
+        
         //        controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for: .touchUpInside)
         
         //    controlsButtonView.octaveUp.addTarget(self, action: #selector(upOctavePressed), for: .touchUpInside)
         
         setupUI()
         loadSound()
+        controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for:.valueChanged)
         
     }
     
     func setupUI() {
-        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
@@ -53,6 +62,10 @@ class ViewController: UIViewController {
         
         stackView.addArrangedSubview(controlsButtonView)
         stackView.addArrangedSubview(newKeyboardView.coolSynthKeyboard)
+//        stackView.addSubview(controlsButtonView)
+//       stackView.addSubview(newKeyboardView.coolSynthKeyboard)
+//        stackView.addSubview(newKeyboardView)
+        
         view.addSubview(stackView)
         
         stackView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
@@ -61,32 +74,65 @@ class ViewController: UIViewController {
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
     
-    @objc func upOctavePressed() {
-        if newKeyboardView.octaveCount == 2 && newKeyboardView.firstOctave == 5 {
-            print("It's over 9,000!")
-        } else if newKeyboardView.firstOctave == 6 {
-            print("It's under 9,000!")
-        } else {
-            newKeyboardView.firstOctave += 1
-        }
-    }
-    
-    @objc func downOctavePressed() {
-        if newKeyboardView.firstOctave == 0 {
-            print("the Tao is like water...")
-        } else {
-            newKeyboardView.firstOctave += -1
-        }
-    }
+//    @objc func upOctavePressed() {
+//        if newKeyboardView.octaveCount == 2 && newKeyboardView.firstOctave == 5 {
+//            print("It's over 9,000!")
+//        } else if newKeyboardView.firstOctave == 6 {
+//            print("It's under 9,000!")
+//        } else {
+//            newKeyboardView.firstOctave += 1
+//        }
+//    }
+//
+//    @objc func downOctavePressed() {
+//        if newKeyboardView.firstOctave == 0 {
+//            print("the Tao is like water...")
+//        } else {
+//            newKeyboardView.firstOctave += -1
+//        }
+//    }
     
 
     @objc func octaveSwitchPressed(){
-        if newKeyboardView.octaveCount == 1 {
-            newKeyboardView.octaveCount += 1
-        } else if newKeyboardView.octaveCount == 2 {
-            newKeyboardView.octaveCount += -1
+        print(controlsButtonView.switchOctaveOutlet.isOn)
+        if  controlsButtonView.switchOctaveOutlet.isOn {
+            
+                        self.newKeyboardView.coolSynthKeyboard.octaveCount = 2
+           self.newKeyboardView.coolSynthKeyboard.programmaticNoteOn(100)
+//           self.stackView.removeArrangedSubview(newKeyboardView)
+//
+//            self.newKeyboardView.removeFromSuperview()
+//            self.stackView.addSubview(controlsButtonView)
+//           self.stackView.addArrangedSubview(newKeyboardViewTwo)
+
+//view.addSubview(stackView)
+//loadSound()
+        } else {
+            self.newKeyboardView.coolSynthKeyboard.octaveCount = 1
+            
+//            self.stackView.addArrangedSubview(controlsButtonView)
+//            self.stackView.removeArrangedSubview(newKeyboardViewTwo)
+//
+//            self.newKeyboardViewTwo.removeFromSuperview()
+//
+//
+//           self.stackView.addArrangedSubview(newKeyboardView)
+//view.addSubview(stackView)
         }
-        viewDidLoad()
+        view.addSubview(stackView)
+
+
+//        stackView.reloadInputViews()
+//        loadSound()
+        
+        
+//        if newKeyboardView.octaveCount == 1 {
+//            newKeyboardView.octaveCount += 1
+//        } else if newKeyboardView.octaveCount == 2 {
+//            newKeyboardView.octaveCount += -1
+//        }
+//        viewDidLoad()
+        
     }
     
     func loadSound() {
@@ -118,14 +164,32 @@ extension ViewController: AKKeyboardDelegate {
     }
 }
 
+
 extension ViewController: OctaveButtonDelegate {
     func setupOctaveLogic() {
-        
+      
         
     }
     
    
 
+    @objc func upOctavePressed() {
+        if newKeyboardView.octaveCount == 2 && newKeyboardView.firstOctave == 5 {
+            print("It's over 9,000!")
+        } else if newKeyboardView.firstOctave == 6 {
+            print("It's under 9,000!")
+        } else {
+            newKeyboardView.firstOctave += 1
+        }
+    }
+    
+    @objc func downOctavePressed() {
+        if newKeyboardView.firstOctave == 0 {
+            print("the Tao is like water...")
+        } else {
+            newKeyboardView.firstOctave += -1
+        }
+    }
 
 }
 

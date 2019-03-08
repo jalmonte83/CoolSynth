@@ -21,12 +21,13 @@ import AudioKitUI
         }
     }
     
-    let coolSynthKeyboard: AKKeyboardView = {
+    var coolSynthKeyboard: AKKeyboardView = {
         let kbv = AKKeyboardView()
         kbv.octaveCount = 1
         kbv.firstOctave = 3
         kbv.keyOnColor = .orange
         kbv.polyphonicMode = true
+        
         return kbv
     }()
     override init(frame: CGRect) {
@@ -41,6 +42,8 @@ import AudioKitUI
     private func commonInit() {
         setupKeyboardUI()
     }
+    
+   
 }
 
 extension coolKeyboardView {
@@ -50,11 +53,13 @@ extension coolKeyboardView {
         addSubview(coolSynthKeyboard)
         
         coolSynthKeyboard.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(coolSynthKeyboard)
-        coolSynthKeyboard.centerYAnchor.constraint(equalToSystemSpacingBelow: self.centerYAnchor, multiplier: 1.20).isActive = true
-        coolSynthKeyboard.bottomAnchor.constraint(equalToSystemSpacingBelow: self.safeAreaLayoutGuide.bottomAnchor, multiplier: 0.50).isActive = true
-        coolSynthKeyboard.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.50, constant: 0).isActive = true
-        coolSynthKeyboard.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.01, constant: 0).isActive = true
+        coolSynthKeyboard.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        coolSynthKeyboard.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+//        coolSynthKeyboard.bottomAnchor.constraint(equalToSystemSpacingBelow: self.safeAreaLayoutGuide.bottomAnchor, multiplier: 0.50).isActive = true
+        coolSynthKeyboard.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.60, constant: 0).isActive = true
+        coolSynthKeyboard.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor).isActive = true
+//        coolSynthKeyboard.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.01, constant: 0).isActive = true
         
     }
 }

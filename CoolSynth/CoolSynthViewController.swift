@@ -13,7 +13,7 @@ import ReplayKit
 
 class CoolSynthViewController: UIViewController {
     
-    private var octave = 3
+    private var octave = 4
     private var controlsButtonView = ControlsButtonView()
     
     private var coolKeyboardView = CoolKeyboardView()

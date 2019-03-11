@@ -9,6 +9,7 @@
 import UIKit
 import AudioKit
 import AudioKitUI
+// ReplayKit will be use when recording is acheiveable
 import ReplayKit
 
 class CoolSynthViewController: UIViewController {

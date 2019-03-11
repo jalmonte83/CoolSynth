@@ -23,8 +23,8 @@ class CoolSynthViewController: UIViewController {
             stackView.reloadInputViews()
         }
     }
-
-
+    
+    
     private var midiSample = AKMIDISampler()
     //TODO: Get metronome to work
     // private var metronome = AKMetronome()
@@ -71,7 +71,7 @@ class CoolSynthViewController: UIViewController {
             coolKeyboardView.coolKeyboard.firstOctave += 1
         }
     }
-
+    
     @objc func downOctavePressed() {
         if coolKeyboardView.firstOctave == 0 {
             print("the Tao is like water...")
@@ -84,8 +84,8 @@ class CoolSynthViewController: UIViewController {
         print(controlsButtonView.switchOctaveOutlet.isOn)
         if  controlsButtonView.switchOctaveOutlet.isOn {
             
-                        self.coolKeyboardView.coolKeyboard.octaveCount = 2
-           self.coolKeyboardView.coolKeyboard.programmaticNoteOn(100)
+            self.coolKeyboardView.coolKeyboard.octaveCount = 2
+            self.coolKeyboardView.coolKeyboard.programmaticNoteOn(100)
         } else {
             self.coolKeyboardView.coolKeyboard.octaveCount = 1
             self.coolKeyboardView.coolKeyboard.programmaticNoteOn(100)

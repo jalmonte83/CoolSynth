@@ -11,7 +11,6 @@
 		0D1A944D2220956B00ECD98C /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1A944B2220956B00ECD98C /* AudioKit.framework */; };
 		0D1D444A22234F180036DE8F /* CoolKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D444922234F180036DE8F /* CoolKeyboardView.swift */; };
 		0D1D444E22243AAE0036DE8F /* ControlsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D444D22243AAE0036DE8F /* ControlsButtonView.swift */; };
-		0D2052452232CC850003C059 /* CoolKeyboardTwoOctView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2052442232CC850003C059 /* CoolKeyboardTwoOctView.swift */; };
 		0D837FED2229F4980048E290 /* gpiano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 0D837FEC2229F4980048E290 /* gpiano.sf2 */; };
 		0D88AB652211CC0E00E58D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D88AB642211CC0E00E58D09 /* AppDelegate.swift */; };
 		0D88AB672211CC0E00E58D09 /* CoolSynthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D88AB662211CC0E00E58D09 /* CoolSynthViewController.swift */; };
@@ -25,7 +24,6 @@
 		0D1A944B2220956B00ECD98C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		0D1D444922234F180036DE8F /* CoolKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolKeyboardView.swift; sourceTree = "<group>"; };
 		0D1D444D22243AAE0036DE8F /* ControlsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsButtonView.swift; sourceTree = "<group>"; };
-		0D2052442232CC850003C059 /* CoolKeyboardTwoOctView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolKeyboardTwoOctView.swift; sourceTree = "<group>"; };
 		0D837FEC2229F4980048E290 /* gpiano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gpiano.sf2; sourceTree = "<group>"; };
 		0D88AB612211CC0E00E58D09 /* CoolSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D88AB642211CC0E00E58D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +56,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0D5279462237296B00E3564F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D444D22243AAE0036DE8F /* ControlsButtonView.swift */,
+				0D1D444922234F180036DE8F /* CoolKeyboardView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		0D88AB582211CC0E00E58D09 = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +88,7 @@
 				0D837FEC2229F4980048E290 /* gpiano.sf2 */,
 				0D88AB642211CC0E00E58D09 /* AppDelegate.swift */,
 				0D88AB662211CC0E00E58D09 /* CoolSynthViewController.swift */,
-				0D1D444922234F180036DE8F /* CoolKeyboardView.swift */,
-				0D2052442232CC850003C059 /* CoolKeyboardTwoOctView.swift */,
-				0D1D444D22243AAE0036DE8F /* ControlsButtonView.swift */,
+				0D5279462237296B00E3564F /* Views */,
 				0D88AB682211CC0E00E58D09 /* Main.storyboard */,
 				0D88AB6B2211CC1100E58D09 /* Assets.xcassets */,
 				0D88AB6D2211CC1100E58D09 /* LaunchScreen.storyboard */,
@@ -173,7 +178,6 @@
 				0D88AB672211CC0E00E58D09 /* CoolSynthViewController.swift in Sources */,
 				0D88AB652211CC0E00E58D09 /* AppDelegate.swift in Sources */,
 				0D1D444E22243AAE0036DE8F /* ControlsButtonView.swift in Sources */,
-				0D2052452232CC850003C059 /* CoolKeyboardTwoOctView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

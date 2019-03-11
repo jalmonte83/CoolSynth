@@ -3,6 +3,7 @@ Soft Synth with unintimidating interface.
 
 
 # overview
+CoolSynth is for the beginner who finds the knobs, buttons, and sliders of a comlpex synth too intimidating.
 
 ![audioKitBass](https://user-images.githubusercontent.com/43770785/54160508-1d263500-4426-11e9-95df-c209b7ce4a3e.jpg)
 ![System8-large](https://user-images.githubusercontent.com/43770785/54160498-17c8ea80-4426-11e9-804a-d348b2de1f7a.jpg)

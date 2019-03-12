@@ -53,7 +53,7 @@ import AudioKitUI
     }()
     
     let octaveUp: AKButton = {
-        let pb = AKButton.init(title: "Octave", callback: { (sender) in
+        let pb = AKButton.init(title: "Up Octave", callback: { (sender) in
             print("hi")
         })
         pb.borderColor = .black

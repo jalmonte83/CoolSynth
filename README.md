@@ -16,8 +16,11 @@ CoolSynth is for the beginner who finds the knobs, buttons, and sliders of a com
 ![CoolSynth Github Gif](https://user-images.githubusercontent.com/43770785/54204036-ce21e380-44a9-11e9-9282-ae395067845f.gif)
 
 
-# Tools
-AudioKit
+### Requirements
+*  iOS 11+ / Mac OS X 10.11+ 
+*  Xcode 10.0+
+*  Swift 4.2+
+*  Cocoapods: AudioKit
 
 
 

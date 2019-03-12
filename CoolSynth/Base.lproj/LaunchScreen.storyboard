@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImage-7506-landscape_1334x750" translatesAutoresizingMaskIntoConstraints="NO" id="xCp-da-d40">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImage-12426s-landscape_2208x1242" highlightedImage="LaunchImage-12426s-landscape_2208x1242" translatesAutoresizingMaskIntoConstraints="NO" id="xCp-da-d40">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage-7506-landscape_1334x750" width="1334" height="750"/>
+        <image name="LaunchImage-12426s-landscape_2208x1242" width="2208" height="1242"/>
     </resources>
 </document>

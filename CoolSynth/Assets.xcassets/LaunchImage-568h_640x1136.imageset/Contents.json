@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "iphone",
+      "filename" : "LaunchImage-568h@2x~iphone_640x1136.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "LaunchImage-568h@2x~iphone_640x1136.png",
       "scale" : "2x"
     },
     {

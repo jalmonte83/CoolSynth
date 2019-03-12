@@ -3,7 +3,8 @@ Soft Synth with unintimidating interface.
 
 
 # overview
-CoolSynth is for the beginner who finds the knobs, buttons, and sliders of a comlpex synth too intimidating.  
+CoolSynth is for the beginner who finds the knobs, buttons, and sliders of a comlpex synth too intimidating.
+Just a few necessary buttons  
 
 
 ![audioKitBass](https://user-images.githubusercontent.com/43770785/54160508-1d263500-4426-11e9-95df-c209b7ce4a3e.jpg)
@@ -23,5 +24,8 @@ CoolSynth is for the beginner who finds the knobs, buttons, and sliders of a com
 *  Cocoapods: AudioKit
 
 
+# Links
+* https://github.com/AudioKit
+*https://github.com/elliottgriff/MyPiano
 
 

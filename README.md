@@ -26,6 +26,7 @@ Just a few necessary buttons
 
 # Links
 * https://github.com/AudioKit
-*https://github.com/elliottgriff/MyPiano
+
+* https://github.com/elliottgriff/MyPiano
 
 

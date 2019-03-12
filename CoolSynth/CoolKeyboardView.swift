@@ -11,7 +11,6 @@ import AudioKitUI
 
 @IBDesignable public class CoolKeyboardView: UIView {
     
-    
     @IBInspectable open var octaveCount: Int = 1
     
     @IBInspectable open var firstOctave: Int = 1 {
@@ -40,8 +39,6 @@ import AudioKitUI
     private func commonInit() {
         setupKeyboardUI()
     }
-    
-    
 }
 
 extension CoolKeyboardView {

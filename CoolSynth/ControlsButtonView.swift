@@ -9,8 +9,6 @@
 import UIKit
 import AudioKitUI
 
-
-
 @IBDesignable public class ControlsButtonView: UIView {
     
     private var keyboardView = CoolKeyboardView()

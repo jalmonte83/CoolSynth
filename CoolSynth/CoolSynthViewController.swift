@@ -24,11 +24,9 @@ class CoolSynthViewController: UIViewController {
         }
     }
     
-    
     private var midiSample = AKMIDISampler()
     //TODO: Get metronome to work
     // private var metronome = AKMetronome()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +81,6 @@ class CoolSynthViewController: UIViewController {
     @objc func octaveSwitchPressed(){
         print(controlsButtonView.switchOctaveOutlet.isOn)
         if  controlsButtonView.switchOctaveOutlet.isOn {
-            
             self.coolKeyboardView.coolKeyboard.octaveCount = 2
             self.coolKeyboardView.coolKeyboard.programmaticNoteOn(100)
         } else {

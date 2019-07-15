@@ -18,6 +18,7 @@ import AudioKitUI
         metronome.title = "Metronome"
         metronome.borderColor = .black
         metronome.borderWidth = 15.0
+        
         return metronome
     }()
     
@@ -65,6 +66,14 @@ import AudioKitUI
         return oSwitch
     }()
     
+    let switchSoundOutlet: UISwitch = {
+        let sSwitch = UISwitch()
+        sSwitch.onTintColor = .blue
+        sSwitch.isOn = false
+        
+        return sSwitch
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -100,6 +109,7 @@ extension ControlsButtonView {
         buttonContainerView.addSubview(octaveUp)
         buttonContainerView.addSubview(switchOctaveOutlet)
         buttonContainerView.addSubview(metronomeButton)
+       buttonContainerView.addSubview(switchSoundOutlet)
         
         switchOctaveOutlet.translatesAutoresizingMaskIntoConstraints = false
         switchOctaveOutlet.centerYAnchor.constraint(equalTo: buttonContainerView.centerYAnchor).isActive = true
@@ -107,6 +117,15 @@ extension ControlsButtonView {
         switchOctaveOutlet.layer.cornerRadius = 15
         switchOctaveOutlet.layer.borderWidth = 1
         switchOctaveOutlet.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        
+        switchSoundOutlet.translatesAutoresizingMaskIntoConstraints = false
+        switchSoundOutlet.centerXAnchor.constraint(equalTo: switchOctaveOutlet.centerXAnchor).isActive = true
+        switchSoundOutlet.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: buttonContainerView.leadingAnchor, multiplier: 4).isActive = true
+        switchSoundOutlet.topAnchor.constraint(equalTo: switchOctaveOutlet.bottomAnchor, constant: 11).isActive = true
+        switchSoundOutlet.heightAnchor.constraint(equalTo: switchOctaveOutlet.heightAnchor, multiplier: 0.75)
+        switchSoundOutlet.layer.cornerRadius = 15
+        switchSoundOutlet.layer.borderWidth = 1
+        switchSoundOutlet.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
         octaveDown.translatesAutoresizingMaskIntoConstraints = false
         octaveDown.centerYAnchor.constraint(equalTo: buttonContainerView.centerYAnchor).isActive = true
@@ -135,5 +154,6 @@ extension ControlsButtonView {
         metronomeButton.layer.cornerRadius = 15
         metronomeButton.layer.borderWidth = 2
         metronomeButton.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
     }
 }

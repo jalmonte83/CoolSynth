@@ -26,7 +26,7 @@ class CoolSynthViewController: UIViewController {
     
     private var midiSample = AKMIDISampler()
     //TODO: Get metronome to work
-    // private var metronome = AKMetronome()
+     private var metronome = AKMetronome()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +89,12 @@ class CoolSynthViewController: UIViewController {
         }
     }
     
+    @objc func metronomeButtonPressed(){
+        print(controlsButtonView.metronomeButton.highlightedColor, " yup" )
+    print("ypi")
+        
+    }
+    
     func loadSound() {
         AKSettings.playbackWhileMuted = true
         try! AudioKit.start()
@@ -117,3 +123,5 @@ extension CoolSynthViewController: AKKeyboardDelegate {
         }
     }
 }
+
+

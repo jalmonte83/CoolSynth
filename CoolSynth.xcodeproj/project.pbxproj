@@ -18,6 +18,10 @@
 		0D88AB6A2211CC0E00E58D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D88AB682211CC0E00E58D09 /* Main.storyboard */; };
 		0D88AB6C2211CC1100E58D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D88AB6B2211CC1100E58D09 /* Assets.xcassets */; };
 		0D88AB6F2211CC1100E58D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D88AB6D2211CC1100E58D09 /* LaunchScreen.storyboard */; };
+		0DC6DE6222E9196900ACCA80 /* FluteClean_C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6DE6122E9196800ACCA80 /* FluteClean_C4.wav */; };
+		0DC6DE6422E91B3B00ACCA80 /* male.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6DE6322E91B3A00ACCA80 /* male.sf2 */; };
+		0DFBF20A22DD35F1003E0DD6 /* DramaPiano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 0DFBF20922DD35F1003E0DD6 /* DramaPiano.sf2 */; };
+		0DFBF20C22DD366F003E0DD6 /* Electric Piano 1.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 0DFBF20B22DD366F003E0DD6 /* Electric Piano 1.sf2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		0D88AB6B2211CC1100E58D09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D88AB6E2211CC1100E58D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D88AB702211CC1100E58D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DC6DE6122E9196800ACCA80 /* FluteClean_C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FluteClean_C4.wav; sourceTree = "<group>"; };
+		0DC6DE6322E91B3A00ACCA80 /* male.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = male.sf2; sourceTree = "<group>"; };
+		0DFBF20922DD35F1003E0DD6 /* DramaPiano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DramaPiano.sf2; sourceTree = "<group>"; };
+		0DFBF20B22DD366F003E0DD6 /* Electric Piano 1.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Electric Piano 1.sf2"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +96,11 @@
 		0D88AB632211CC0E00E58D09 /* CoolSynth */ = {
 			isa = PBXGroup;
 			children = (
+				0DFBF20922DD35F1003E0DD6 /* DramaPiano.sf2 */,
+				0DFBF20B22DD366F003E0DD6 /* Electric Piano 1.sf2 */,
 				0D837FEC2229F4980048E290 /* gpiano.sf2 */,
+				0DC6DE6122E9196800ACCA80 /* FluteClean_C4.wav */,
+				0DC6DE6322E91B3A00ACCA80 /* male.sf2 */,
 				0D88AB642211CC0E00E58D09 /* AppDelegate.swift */,
 				0D88AB662211CC0E00E58D09 /* CoolSynthViewController.swift */,
 				0D5279462237296B00E3564F /* Views */,
@@ -164,10 +176,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5279682238195500E3564F /* LaunchSreenIpad.xib in Resources */,
+				0DFBF20C22DD366F003E0DD6 /* Electric Piano 1.sf2 in Resources */,
+				0DC6DE6422E91B3B00ACCA80 /* male.sf2 in Resources */,
 				0D88AB6F2211CC1100E58D09 /* LaunchScreen.storyboard in Resources */,
 				0D837FED2229F4980048E290 /* gpiano.sf2 in Resources */,
 				0D88AB6C2211CC1100E58D09 /* Assets.xcassets in Resources */,
 				0D88AB6A2211CC0E00E58D09 /* Main.storyboard in Resources */,
+				0DC6DE6222E9196900ACCA80 /* FluteClean_C4.wav in Resources */,
+				0DFBF20A22DD35F1003E0DD6 /* DramaPiano.sf2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

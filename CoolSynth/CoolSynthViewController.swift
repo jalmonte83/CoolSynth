@@ -42,6 +42,7 @@ class CoolSynthViewController: UIViewController {
         loadSound()
         controlsButtonView.octaveUp.callback(controlsButtonView.octaveUp)
         controlsButtonView.switchOctaveOutlet.addTarget(self, action: #selector(octaveSwitchPressed), for:.valueChanged)
+        controlsButtonView.switchSoundOutlet.addTarget(self, action: #selector(soundChangeSwitchPressed), for: .valueChanged)
     }
     
     func setupUI() {
@@ -86,6 +87,19 @@ class CoolSynthViewController: UIViewController {
         } else {
             self.coolKeyboardView.coolKeyboard.octaveCount = 1
             self.coolKeyboardView.coolKeyboard.programmaticNoteOn(100)
+        }
+    }
+    
+    @objc func soundChangeSwitchPressed() {
+        print(controlsButtonView.switchSoundOutlet.isOn)
+        if controlsButtonView.switchSoundOutlet.isOn {
+            do {
+                try midiSample.loadMelodicSoundFont("male", preset: 0)
+            } catch {
+                print("couldnt load piano soundFont")
+            }
+        } else {
+            loadSound()
         }
     }
     
